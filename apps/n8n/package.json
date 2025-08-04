@@ -1,0 +1,40 @@
+{
+  "name": "@hookbuilder/n8n-nodes-defi",
+  "version": "1.0.0",
+  "description": "Custom n8n nodes for DeFi automation - HookBuilder Platform",
+  "keywords": [
+    "n8n-community-node-package",
+    "defi",
+    "ethereum",
+    "blockchain",
+    "hookbuilder"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hookbuilder-platform/hookbuilder",
+  "author": {
+    "name": "HookBuilder Platform",
+    "email": "hello@hookbuilder.platform"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hookbuilder-platform/hookbuilder.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Custom nodes ready for n8n'",
+    "dev": "echo 'Development mode - watch for changes'"
+  },
+  "files": [
+    "nodes"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "nodes/EthereumBalance.node.js"
+    ]
+  },
+  "devDependencies": {
+    "n8n-workflow": "^1.0.0"
+  }
+}
