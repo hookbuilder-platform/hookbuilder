@@ -1,0 +1,49 @@
+{
+  "name": "hookbuilder",
+  "version": "0.0.1",
+  "description": "No-code platform for building, testing, and deploying DeFi automation strategies using Uniswap V4 Hooks",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean && rimraf node_modules",
+    "evidence:generate": "node scripts/generate-evidence.js",
+    "demo:record": "echo 'Recording demo for grants - see docs/grants/'",
+    "grant:package": "node scripts/package-submission.js"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "rimraf": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hookbuilder-platform/hookbuilder.git"
+  },
+  "keywords": [
+    "defi",
+    "uniswap",
+    "hooks",
+    "automation",
+    "no-code",
+    "blockchain",
+    "ethereum",
+    "web3"
+  ],
+  "author": "HookBuilder Platform <hello@hookbuilder.platform>",
+  "license": "MIT",
+  "homepage": "https://github.com/hookbuilder-platform/hookbuilder#readme",
+  "bugs": {
+    "url": "https://github.com/hookbuilder-platform/hookbuilder/issues"
+  }
+}
