@@ -37,7 +37,5 @@
       "nodes/EthereumBalance.node.js"
     ]
   },
-  "devDependencies": {
-    "n8n-workflow": "^1.0.0"
-  }
+  "devDependencies": {}
 }
