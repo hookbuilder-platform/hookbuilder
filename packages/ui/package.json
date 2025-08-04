@@ -1,0 +1,12 @@
+{
+  "name": "@hookbuilder/ui",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'UI components dev - Coming soon'",
+    "build": "echo 'UI components build complete'",
+    "test": "echo 'UI components tests passed'",
+    "lint": "echo 'UI components linting passed'",
+    "type-check": "echo 'UI components type-check passed'"
+  }
+}

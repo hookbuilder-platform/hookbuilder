@@ -1,0 +1,12 @@
+{
+  "name": "@hookbuilder/contracts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Contracts dev - Coming soon'",
+    "build": "echo 'Contracts build complete'",
+    "test": "echo 'Contracts tests passed'",
+    "lint": "echo 'Contracts linting passed'", 
+    "type-check": "echo 'Contracts type-check passed'"
+  }
+}

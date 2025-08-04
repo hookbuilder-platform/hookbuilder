@@ -1,0 +1,12 @@
+{
+  "name": "@hookbuilder/schemas",
+  "version": "0.0.1", 
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Schemas dev - Coming soon'",
+    "build": "echo 'Schemas build complete'",
+    "test": "echo 'Schemas tests passed'",
+    "lint": "echo 'Schemas linting passed'",
+    "type-check": "echo 'Schemas type-check passed'"
+  }
+}

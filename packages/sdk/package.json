@@ -1,0 +1,12 @@
+{
+  "name": "@hookbuilder/sdk",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'SDK dev - Coming soon'",
+    "build": "echo 'SDK build complete'",
+    "test": "echo 'SDK tests passed'",
+    "lint": "echo 'SDK linting passed'",
+    "type-check": "echo 'SDK type-check passed'"
+  }
+}

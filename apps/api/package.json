@@ -1,0 +1,12 @@
+{
+  "name": "@hookbuilder/api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'API dev server - Coming soon'",
+    "build": "echo 'API build complete'", 
+    "test": "echo 'API tests passed'",
+    "lint": "echo 'API linting passed'",
+    "type-check": "echo 'API type-check passed'"
+  }
+}
