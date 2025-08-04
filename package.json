@@ -12,7 +12,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "type-check": "turbo run type-check", 
+    "type-check": "turbo run type-check",
     "clean": "turbo run clean && rimraf node_modules",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
@@ -21,8 +21,8 @@
     "grant:package": "node scripts/package-submission.js"
   },
   "devDependencies": {
-    "turbo": "^1.10.0",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.0",
+    "turbo": "^1.10.0"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -47,5 +47,8 @@
   "homepage": "https://github.com/hookbuilder-platform/hookbuilder#readme",
   "bugs": {
     "url": "https://github.com/hookbuilder-platform/hookbuilder/issues"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
