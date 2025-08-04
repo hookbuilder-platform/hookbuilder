@@ -6,7 +6,7 @@ Phase 0: Setup & Repository (1–2 days)
 - Scaffold Vite + React + TS + Tailwind; create folder structure (frontend, backend, workflows, contracts, docs).
 - Evidence: initial tag v0.0.1, repo structure screenshot, CI “hello”.
 
-Phase 1 (M1): Orchestration + Polygon Integration (5–7 days)
+Phase 1 (M1): Orchestration + Polygon Integration (6-8 days + 20% buffer)
 
 1. n8n self‑host (Docker) + minimal CI
 
@@ -30,7 +30,7 @@ Phase 1 (M1): Orchestration + Polygon Integration (5–7 days)
    - Record a 90–120s Loom (per script).
    - Evidence: tx hash, Loom, repo tag v0.1.1.
 
-Phase 2 (M2): Contracts + Workflow Execution (7–10 days)
+Phase 2 (M2): Contracts + Workflow Execution (8-12 days + 20% buffer)
 
 1. Hook templates (Solidity) + tests (Hardhat/Foundry)
 
@@ -57,7 +57,7 @@ Phase 2 (M2): Contracts + Workflow Execution (7–10 days)
    - Basic gas report + observations.
    - Evidence: QA report, tag v0.2.4.
 
-Phase 3 (M3): UI Builder + Deploy Flow (alpha) (7–9 days)
+Phase 3 (M3): UI Builder + Deploy Flow (alpha) (9-11 days + 25% buffer for React Flow complexity)
 
 1. Canvas builder (React Flow) MVP
 
@@ -84,7 +84,7 @@ Phase 3 (M3): UI Builder + Deploy Flow (alpha) (7–9 days)
    - Three scenarios: deploy hook, trigger strategy, monitor.
    - Evidence: test report, tag v0.3.4.
 
-Phase 4 (M4): Data Integrations + Basic Backtesting (5–7 days)
+Phase 4 (M4): Data Integrations + Basic Backtesting (6-8 days + 20% buffer)
 
 1. Adapters: CoinGecko/DefiLlama + fallback
 
@@ -104,7 +104,7 @@ Phase 4 (M4): Data Integrations + Basic Backtesting (5–7 days)
 4. Additional 2 nodes (GasTracker, PriceAlert)
    - Evidence: packages + example workflows, tag v0.4.3.
 
-Phase 5 (M5): Beta + Materials + Community (4–6 days)
+Phase 5 (M5): Beta + Materials + Community (5-7 days + 20% buffer for community coordination)
 
 1. Onboarding guide + 2 tutorials (text + Loom)
 
@@ -132,13 +132,63 @@ Cross‑cutting artifacts and “legitimacy”
 - Security.md + DISCLAIMER + minimal SLO (success rate, MTTR).
 - Deliverables Acceptance Criteria: per milestone (DoD: code, tests, evidence, docs, video).
 
-Where to start tomorrow — Day 1–2:
+🚀 **Strategic Implementation Recommendations**
 
-- Repo bootstrap + docker‑compose for n8n + Vite React TS skeleton + README sections + SECURITY/DISCLAIMER.
-- Create Submission_Package.md (empty index).
-- Tag v0.0.1. Day 3–5:
-- 3 custom nodes (Wallet, PriceOracle, TxBuilder) + sample workflow + first Loom POC.
-- Testnet tx hash + README “POC Evidence”.
-- Tag v0.1.1.
+### **Community-First Execution (Start Day -30 to Day 0)**
+**Pre-Development Phase** - Build community before building product:
+- **n8n Community**: Post about DeFi automation needs, contribute to discussions, build reputation
+- **DeFi Protocol Communities**: Engage in Uniswap, Aave, Polygon Discord/forums with technical insights  
+- **Content Strategy**: Weekly blog posts about DeFi automation trends, technical Twitter threads
+- **Partnership Outreach**: Early conversations with OZ team, n8n core contributors, protocol teams
 
-This is a detailed, step‑by‑step roadmap consolidating all existing documents. Completing it gives you a complete, grant‑ready package with operational readiness and prior‑art defensibility.
+### **Enhanced Timeline Summary (with buffers)**
+- **Phase 0**: Setup (1-2 days) 
+- **Phase 1**: Orchestration + Polygon (6-8 days) 
+- **Phase 2**: Contracts + Execution (8-12 days)
+- **Phase 3**: UI Builder + Deploy Flow (9-11 days) 
+- **Phase 4**: Data + Backtesting (6-8 days)
+- **Phase 5**: Beta + Community (5-7 days)
+- **Total**: 35-48 days (vs original 28-39) + community pre-building
+
+### **Competitive Advantage Strategy**
+**Beyond Basic UI Builder:**
+- **Data Moats**: Proprietary backtesting engine with real DeFi performance data
+- **Network Effects**: Strategy marketplace with performance analytics & social proof
+- **Technical Innovation**: Gas optimization recommendations + MEV protection insights  
+- **Community Ownership**: Official n8n/Zapier integration status + protocol partnerships
+
+### **Revenue Innovation Roadmap**
+**Multi-Stream Monetization:**
+- **Templates + Subscriptions**: $49/m Creator plan (baseline)
+- **Performance Revenue Share**: 2-5% of strategy profits (scalable)
+- **White-label Licensing**: DAO/protocol tooling market (enterprise)
+- **"Verified" Strategy Certification**: Premium strategy review/certification program
+- **Implementation Consulting**: Custom strategy development for DAOs
+
+### **Where to Start Tomorrow — Enhanced Day 1–2:**
+
+**Technical Foundation:**
+- Repo bootstrap + docker‑compose for n8n + Vite React TS skeleton + README sections + SECURITY/DISCLAIMER
+- Create Submission_Package.md (empty index) + community engagement tracking
+- Tag v0.0.1
+
+**Community Foundation (Parallel):**
+- Create accounts: n8n Discord, DeFi Twitter, Uniswap/Aave/Polygon communities
+- Write first technical blog post: "The Future of DeFi Automation: No-Code Smart Contract Orchestration"
+- Reach out to 3 n8n community leaders and 2 DeFi protocol team members
+
+**Day 3–5:**
+- 3 custom nodes (Wallet, PriceOracle, TxBuilder) + sample workflow + first Loom POC
+- Community feedback collection on first POC demo
+- Testnet tx hash + README "POC Evidence"
+- Tag v0.1.1
+
+### **Success Metrics Enhancement**
+**Beyond Technical Deliverables:**
+- **Community Growth**: 100+ Discord/Twitter followers by M3
+- **Partnership Pipeline**: 2+ formal integration discussions by M4  
+- **User Acquisition**: 25+ beta users by M5 (vs original 10)
+- **Revenue Validation**: First paying customer by M5
+- **Content Authority**: 5+ technical articles published, community recognition
+
+This enhanced roadmap transforms HookBuilder from a solo development project into a community-driven platform with stronger market positioning, reduced user acquisition risk, and multiple competitive advantages. The additional timeline buffers ensure realistic delivery expectations while community pre-building creates demand before launch.
