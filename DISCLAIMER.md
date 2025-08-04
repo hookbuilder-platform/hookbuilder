@@ -71,4 +71,4 @@ This disclaimer may be updated from time to time. Users are responsible for revi
 
 **By using HookBuilder Platform, you acknowledge that you have read, understood, and agree to this disclaimer.**
 
-Last updated: July 2025
+Last updated: August 2025

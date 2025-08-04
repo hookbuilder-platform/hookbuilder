@@ -1,7 +1,7 @@
 # HookBuilder — One-Pager + Executive Summary (PL/EN)
 
 Version: 1.0  
-Date: July 2025  
+Date: August 2025
 Owner: HookBuilder
 
 ---
