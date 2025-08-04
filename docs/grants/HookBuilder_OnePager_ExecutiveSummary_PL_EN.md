@@ -219,9 +219,9 @@ We seek grant funding (PARP/NCBR, Polygon) to develop DeFi nodes for n8n, data i
 ---
 
 ## Contact
-Name: [Your Name]  
-Email: [your-email@hookbuilder.com]  
-GitHub: [github.com/HookBuilder]  
-Website: [hookbuilder.com]  
+Name: [HookBuilder Platform]  
+Email: [hookbuilder@proton.me]  
+GitHub: [(https://github.com/hookbuilder-platform)]  
+Website: [?]  
 Deck: [hookbuilder.com/deck]  
 Demo: [hookbuilder.com/demo]

@@ -12,9 +12,9 @@ The No-Code Platform for DeFi Automation
 "Democratizing DeFi Development, One Hook at a Time"
 
 ───────────────────────────────────────
-[Your Name], Founder & CEO (Solo Founder)
-[Your Email] | [Your LinkedIn]
-August 2024
+[HookBuilder Platform], Founder & CEO (Solo Founder)
+[hookbuilder@proton.me]
+July 2025
 ───────────────────────────────────────
 
 Note (context): Solo founder, no prior funding, no internal engineering team — delivery via AI/no‑code and open‑source components with milestone‑based spend (auditable deliverables).

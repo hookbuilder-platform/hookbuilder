@@ -1,14 +1,14 @@
 Project Concept for R&D and Implementation Funding
-🧩 Project Title:
+Project Title:
 
 HookBuilder – Orchestrated Automation Platform for DeFi Protocols
 1. Project Summary
 
 Applicant Profile & Delivery Model (Solo Founder, No Prior Funding)
-- Status: Solo founder, bez finansowania wstępnego i bez wewnętrznego zespołu developerskiego.
-- Realizacja: Integracyjna (n8n, OpenZeppelin, Zapier, The Graph), z użyciem narzędzi AI/no‑code i komponentów open‑source, publiczne testnety.
-- Budżetowanie: W modelu kamieni milowych z rozliczaniem po dostarczeniu mierzalnych rezultatów (audyt, POC, wdrożenia).
-- Outsourcing: Krytyczne zadania specjalistyczne (np. audyt smart kontraktów, security hardening) kontraktowane dokładnie na etapie ich konieczności.
+- Status: Solo founder; no initial funding; no internal engineering team.
+- Delivery: Integration‑first (n8n, OpenZeppelin Defender, Zapier, The Graph), leveraging AI/no‑code and open‑source components on public testnets.
+- Budgeting: Milestone‑based; disbursements tied to auditable deliverables (e.g., audits, POC evidence, deployments).
+- Outsourcing: Critical specialist tasks (e.g., smart‑contract audit, security hardening) engaged precisely at the milestone they are required.
 
 HookBuilder is a modular, integration-first platform enabling users to build, execute, and share automated DeFi strategies by combining leading ecosystem tools such as Uniswap V4 Hooks, n8n, Zapier, OpenZeppelin, and data providers like Zapper.
 
@@ -132,7 +132,7 @@ Status	Early-stage; Solo founder, no prior funding
 Team	Solo execution with on-demand contractors (audit/security/UX as needed)
 Founder Experience	[Your relevant background: product, DeFi, ops]; leveraging AI/no‑code
 Advisors	Seeking partners from Uniswap, n8n, Zapier; engaging security advisors pre‑mainnet
-✅ Conclusion
+Conclusion
 
 HookBuilder leverages existing DeFi primitives to deliver a modular, secure, and user-friendly automation layer, enabling faster, smarter participation in decentralized finance.
 

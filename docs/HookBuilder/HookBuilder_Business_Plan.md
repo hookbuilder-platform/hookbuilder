@@ -746,8 +746,8 @@ Currently no platform offers no-code DeFi hook creation.
 
 **Document Version:** 1.0  
 **Last Updated:** July 2025  
-**Prepared By:** [Your Name]  
-**Contact:** [Your Email]  
+**Prepared By:** [HookBuilder Platform]  
+**Contact:** [hookbuilder@proton.me]  
 
 ---
 

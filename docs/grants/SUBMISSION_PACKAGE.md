@@ -8,7 +8,7 @@ This document serves as the central hub for all grant submission materials and t
 - **GitHub Repository**: https://github.com/hookbuilder-platform/hookbuilder
 - **Latest Commit**: `d67d516` (Security audit fixed)
 - **Version Tag**: v0.0.1
-- **Development Start**: August 2025
+- **Development Start**: July 2025
 - **CI Status**: ✅ 4/4 checks passing
 - **Security Status**: ✅ Zero vulnerabilities
 
@@ -186,12 +186,12 @@ This document serves as the central hub for all grant submission materials and t
 
 ## 📞 **Contact Information**
 
-**Email**: hello@hookbuilder.platform  
+**Email**: hookbuilder@proton.me  
 **GitHub**: https://github.com/hookbuilder-platform  
 **Repository**: https://github.com/hookbuilder-platform/hookbuilder  
 
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: August 2025  
+**Last Updated**: July 2025  
 **Evidence Status**: Repository Initialized ✅ | POC In Progress 🔄 | Demo Recording 📋

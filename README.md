@@ -236,10 +236,10 @@ To be finalized with legal review (MIT for libraries/templates; source-available
 ---
 
 ## Contact
-- Name: [Your Name]
-- Email: [your-email@hookbuilder.com]
-- GitHub: https://github.com/HookBuilder
-- Website: https://hookbuilder.com
+- Name: [HookBuilder Platform]
+- Email: [hookbuilder@proton.me]
+- GitHub: https://github.com/hookbuilder-platform
+- Website: (?)
 - Deck: https://hookbuilder.com/deck
 - Demo: https://hookbuilder.com/demo
 

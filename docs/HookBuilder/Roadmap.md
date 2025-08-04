@@ -1,144 +1,144 @@
-Tak — mamy już rozproszone elementy roadmapy w kilku plikach (Before.md: checklist 1–2 tyg., Polygon_Vilage_Application_Form.md: milestones M1–M5 z budżetem i evidence, One‑Pager: skrót timeline 6–8 tyg., Technical_Learning_Path: kompetencje per miesiąc). Poniżej konsoliduję to w jeden, szczegółowy “Step‑by‑Step Build Roadmap” od zera do bety, tak abyś mógł iść liniowo, dzień po dniu (zaznaczam artefakty/evidence).
+Yes — we already have roadmap elements spread across multiple files (Before.md: 1–2 week checklist, Polygon_Vilage_Application_Form.md: milestones M1–M5 with budget and evidence, One‑Pager: 6–8 week timeline, Technical_Learning_Path: month-by-month skills). Below is a consolidated, step‑by‑step build roadmap from zero to beta, with explicit artifacts/evidence.
 
-Faza 0: Setup i repo (1–2 dni)
+Phase 0: Setup & Repository (1–2 days)
 
-- Zainicjuj repo (monorepo lub front/back osobno), dodaj podstawowe pliki: README z sekcjami “POC Evidence”, “Milestones & Budget by Deliverable”, LICENSE (draft), SECURITY.md, DISCLAIMER, .editorconfig, CI placeholder.
-- Skonfiguruj Vite + React + TS + Tailwind, dodaj struktury katalogów (frontend, backend, workflows, contracts, docs).
-- Evidence: pierwszy tag v0.0.1, screenshot struktury, CI “hello”.
+- Initialize the repo (monorepo or separate front/back). Add basics: README with “POC Evidence” and “Milestones & Budget by Deliverable”, LICENSE (draft), SECURITY.md, DISCLAIMER, .editorconfig, CI placeholder.
+- Scaffold Vite + React + TS + Tailwind; create folder structure (frontend, backend, workflows, contracts, docs).
+- Evidence: initial tag v0.0.1, repo structure screenshot, CI “hello”.
 
-Faza 1 (M1): Orkiestracja + Polygon integracja (5–7 dni)
+Phase 1 (M1): Orchestration + Polygon Integration (5–7 days)
 
-1. n8n self‑host (Docker) + minimalny CI
+1. n8n self‑host (Docker) + minimal CI
 
-   - docker‑compose.yml, podstawowa konfiguracja, healthcheck.
-   - Evidence: docker up logs, README sekcja uruchomienia, tag v0.1.0.
+   - docker‑compose.yml, basic config, healthcheck.
+   - Evidence: docker up logs, README run section, tag v0.1.0.
 
-2. Custom nodes v1 (3 szt.): Wallet, PriceOracle (CoinGecko/DefiLlama), TxBuilder
+2. Custom nodes v1 (3): Wallet, PriceOracle (CoinGecko/DefiLlama), TxBuilder
 
-   - Każdy jako osobny pakiet z README i przykładami.
-   - Evidence: paczki w repo, sample workflow JSON, demo video (krótki).
+   - Each as a separate package with README and examples.
+   - Evidence: node packages, sample workflow JSON, short demo video.
 
-3. Integracja Polygon PoS/zkEVM w node’ach + workflow sample
+3. Polygon PoS/zkEVM integration in nodes + sample workflow
 
-   - Provider RPC (free tier), env handling, prosty test read/write.
-   - Evidence: workflow JSON, zapisane outputy/przebieg.
+   - RPC provider (free tier), env handling, simple read/write test.
+   - Evidence: workflow JSON, saved outputs/execution trace.
 
-4. POC “walking skeleton”
+4. “Walking skeleton” POC
 
-   - n8n: trigger → fetch price → decision → execute_strategy (mock lub prosty kontrakt).
-   - On‑chain: 1 transakcja na testnecie (Polygon/Sepolia), link w README.
-   - Nagraj Loom 90–120 s (wg skryptu).
-   - Evidence: hash tx, Loom, repo tag v0.1.1.
+   - n8n: trigger → fetch price → decision → execute_strategy (mock or simple contract).
+   - On‑chain: 1 testnet transaction (Polygon/Sepolia) linked in README.
+   - Record a 90–120s Loom (per script).
+   - Evidence: tx hash, Loom, repo tag v0.1.1.
 
-Faza 2 (M2): Kontrakty + egzekucja z workflow (7–10 dni)
+Phase 2 (M2): Contracts + Workflow Execution (7–10 days)
 
-1. Hook templates (Solidity) + testy (Hardhat/Foundry)
+1. Hook templates (Solidity) + tests (Hardhat/Foundry)
 
-   - Minimalne szablony, unit testy, raport coverage.
-   - Evidence: kontrakty + testy, raport coverage, tag v0.2.0.
+   - Minimal templates, unit tests, coverage report.
+   - Evidence: contracts + tests, coverage report, tag v0.2.0.
 
-2. Deployment scripts (Create2 jeśli ma sens) + viem/ethers
+2. Deployment scripts (Create2 if sensible) + viem/ethers
 
-   - Skrypty deploy, runbook deploymentu, adresy testnet.
-   - Evidence: adresy wdrożeń, deployment runbook, tag v0.2.1.
+   - Deployment scripts, deployment runbook, testnet addresses.
+   - Evidence: deployed addresses, runbook, tag v0.2.1.
 
-3. Integracja n8n → kontrakty (wywołania z workflow)
+3. n8n → contracts (execute from workflow)
 
-   - Node do podpisu/wywołania, błędy/retry podstawowe.
-   - Evidence: workflow JSON + udane tx hashes, logi, tag v0.2.2.
+   - Signing/invocation node, basic error/retry handling.
+   - Evidence: workflow JSON + successful tx hashes, logs, tag v0.2.2.
 
 4. Defender baseline (relayer/sentinel/autotask)
 
-   - Konfiguracja minimalna do monitoringu i wykonywania.
-   - Evidence: Defender IDs/logs screenshot, tag v0.2.3.
+   - Minimal configuration for monitoring and execution.
+   - Evidence: Defender IDs/log screenshots, tag v0.2.3.
 
-5. QA: wstępny gas profiling i smoke run
+5. QA: initial gas profiling and smoke run
 
-   - Prosty raport gas + obserwacje.
+   - Basic gas report + observations.
    - Evidence: QA report, tag v0.2.4.
 
-Faza 3 (M3): UI Builder + Deploy Flow (alpha) (7–9 dni)
+Phase 3 (M3): UI Builder + Deploy Flow (alpha) (7–9 days)
 
 1. Canvas builder (React Flow) MVP
 
-   - Podstawowe bloki, połączenia, serializacja do JSON.
-   - Evidence: UI demo video, screeny, tag v0.3.0.
+   - Core blocks, connections, JSON serialization.
+   - Evidence: UI demo video, screenshots, tag v0.3.0.
 
-2. Template gallery (≥5 strategii) + parametryzacja
+2. Template gallery (≥5 strategies) + parameterization
 
-   - Predefiniowane szablony, param forms, walidacja.
-   - Evidence: lista szablonów + jsony, tag v0.3.1.
+   - Predefined templates, param forms, validation.
+   - Evidence: template list + JSONs, tag v0.3.1.
 
 3. Deploy wizard
 
-   - Kroki: network, params, sign, monitor.
-   - Evidence: flow nagrany, działający E2E z testnetem, tag v0.3.2.
+   - Steps: network, params, sign, monitor.
+   - Evidence: recorded flow, E2E on testnet, tag v0.3.2.
 
 4. UX copy + basic validation
 
-   - Teksty, komunikaty błędów, stany ładowania.
-   - Evidence: checklist UX, tag v0.3.3.
+   - Texts, error messages, loading states.
+   - Evidence: UX checklist, tag v0.3.3.
 
 5. e2e smoke (Playwright/Cypress light)
 
-   - Trzy scenariusze: deploy hook, trigger strategy, monitorowanie.
-   - Evidence: raport testów, tag v0.3.4.
+   - Three scenarios: deploy hook, trigger strategy, monitor.
+   - Evidence: test report, tag v0.3.4.
 
-Faza 4 (M4): Dane + backtesting basic (5–7 dni)
+Phase 4 (M4): Data Integrations + Basic Backtesting (5–7 days)
 
 1. Adapters: CoinGecko/DefiLlama + fallback
 
-   - Warstwa abstrakcji providerów.
-   - Evidence: adapter repo + testy, tag v0.4.0.
+   - Provider abstraction layer.
+   - Evidence: adapter repo + tests, tag v0.4.0.
 
-2. Backtesting basic
+2. Basic backtesting
 
-   - Pobranie historii, prosta symulacja wybranych sygnałów.
-   - Evidence: wyniki/snapshoty, tag v0.4.1.
+   - Historical fetch, simple signal simulation.
+   - Evidence: results/snapshots, tag v0.4.1.
 
-3. Telemetria minimalna
+3. Minimal telemetry
 
-   - Zdarzenia, błędy, prosty dev dashboard (np. Grafana/Loki opcjonalnie).
-   - Evidence: screeny dashboardu, tag v0.4.2.
+   - Events, errors, simple dev dashboard (Grafana/Loki optional).
+   - Evidence: dashboard screenshots, tag v0.4.2.
 
-4. Dodatkowe 2 nodes (GasTracker, PriceAlert)
-   - Evidence: paczki + przykładowe workflowy, tag v0.4.3.
+4. Additional 2 nodes (GasTracker, PriceAlert)
+   - Evidence: packages + example workflows, tag v0.4.3.
 
-Faza 5 (M5): Beta + materiały + community (4–6 dni)
+Phase 5 (M5): Beta + Materials + Community (4–6 days)
 
-1. Onboarding guide + 2 tutoriale (tekst + Loom)
+1. Onboarding guide + 2 tutorials (text + Loom)
 
-   - “Pierwszy deploy hook”, “Pierwsza strategia”.
-   - Evidence: linki do tutoriali, tag v0.5.0.
+   - “First hook deploy”, “First strategy”.
+   - Evidence: tutorial links, tag v0.5.0.
 
 2. 10 alpha/beta users
 
-   - Zbieranie feedbacku ustrukturyzowane (formularz/Issue template).
-   - Evidence: arkusz feedback + wnioski, tag v0.5.1.
+   - Structured feedback (form/Issue template).
+   - Evidence: feedback sheet + synthesis, tag v0.5.1.
 
 3. Strategy templates v0 (≥5)
 
-   - Dopieszczenie i opisanie metadanych, polityka wersjonowania.
-   - Evidence: listing templates, tag v0.5.2.
+   - Polished metadata, versioning policy.
+   - Evidence: template listing, tag v0.5.2.
 
-4. Optymalizacje/bugfix buffer
+4. Optimization/bugfix buffer
    - Evidence: changelog, tag v0.5.3.
 
-Przekrojowe artefakty i “legitność”
+Cross‑cutting artifacts and “legitimacy”
 
-- Submission_Package.md: jeden dokument‑indeks do decka, one‑pagera, formy Polygon, README, Loom, tagów, hashy, Defender IDs, roadmapy, budżetu 15k, LOI.
-- Public Roadmap & Changelog: datowane wpisy, commit/tag proofs.
-- IP & Prior Art: linki do publicznych timestampów (posty X/LinkedIn/GH Discussions, IPFS/Arweave hash).
-- Security.md + DISCLAIMER + minimalne SLO (success rate, MTTR).
-- Deliverables Acceptance Criteria: per milestone (DoD: kod, testy, evidence, docs, wideo).
+- Submission_Package.md: single index to deck, one‑pager, Polygon form, README, Loom, tags, hashes, Defender IDs, roadmap, $15k budget, LOIs.
+- Public Roadmap & Changelog: dated entries, commit/tag proofs.
+- IP & Prior Art: links to public timestamps (X/LinkedIn/GH Discussions, IPFS/Arweave hash).
+- Security.md + DISCLAIMER + minimal SLO (success rate, MTTR).
+- Deliverables Acceptance Criteria: per milestone (DoD: code, tests, evidence, docs, video).
 
-Start od czego jutro Dzień 1–2:
+Where to start tomorrow — Day 1–2:
 
-- Repo bootstrap + docker‑compose dla n8n + Vite React TS skeleton + README sekcje + SECURITY/DISCLAIMER.
-- Załóż Submission_Package.md (pusty indeks).
-- Tag v0.0.1. Dzień 3–5:
-- 3 custom nodes (Wallet, PriceOracle, TxBuilder) + sample workflow + pierwszy Loom POC.
-- Hash tx z testnetu + README “POC Evidence”.
+- Repo bootstrap + docker‑compose for n8n + Vite React TS skeleton + README sections + SECURITY/DISCLAIMER.
+- Create Submission_Package.md (empty index).
+- Tag v0.0.1. Day 3–5:
+- 3 custom nodes (Wallet, PriceOracle, TxBuilder) + sample workflow + first Loom POC.
+- Testnet tx hash + README “POC Evidence”.
 - Tag v0.1.1.
 
-To jest szczegółowy roadmap “krok po kroku” sklejający wszystkie dotychczasowe dokumenty. Po jego zrealizowaniu masz komplet, by aplikować i bronić pierwszeństwo oraz gotowość operacyjną.
+This is a detailed, step‑by‑step roadmap consolidating all existing documents. Completing it gives you a complete, grant‑ready package with operational readiness and prior‑art defensibility.

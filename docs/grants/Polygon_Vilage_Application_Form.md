@@ -1,12 +1,12 @@
-🧾 Polygon Village Grant Application – HookBuilder (Solo Developer)
-🧠 1. Project Summary (Elevator Pitch)
+ Polygon Village Grant Application – HookBuilder (Solo Developer)
+1. Project Summary (Elevator Pitch)
 
 HookBuilder is a visual, no-code automation platform for decentralized finance. It allows users to orchestrate DeFi strategies using integrations with tools like Uniswap V4 Hooks, Zapier, n8n, and OpenZeppelin Defender.
 
 Rather than building a new protocol, HookBuilder serves as the middleware orchestration layer between existing tools – enabling non-technical users, DAOs, and developers to build smart, programmable on-chain logic visually.
 
 Applicant context: Solo founder with no prior funding and no internal engineering team. Delivery is integration‑first with AI/no‑code tooling and open‑source components, using milestone‑based budgeting tied to auditable deliverables (e.g., tx hashes, repo tags, audit reports).
-🎯 2. Why are you building this on Polygon?
+2. Why are you building this on Polygon?
 
 Polygon is the perfect home for HookBuilder because:
 
@@ -21,7 +21,7 @@ Polygon is the perfect home for HookBuilder because:
 Solo‑friendly: Polygon’s tooling, documentation, and grants ecosystem are particularly supportive for solo builders shipping POC→MVP quickly with measurable on‑chain evidence.
 
 HookBuilder aims to become a core DeFi UX layer – and Polygon is ideal for accessible and composable smart contract logic.
-🧰 3. What have you built so far?
+ 3. What have you built so far?
 
 Development to date includes:
 
@@ -34,12 +34,12 @@ Development to date includes:
     Created pitch deck and detailed grant-ready technical report (see below)
 
 Evidence & links:
-🔗 GitHub repository (work-in-progress) (or placeholder)
-📄 PARP/NCBR-style R&D report
-🖼️ Pitch deck (PDF)
-📝 One‑Pager + Executive Summary (PL/EN)
-🎥 Short Loom video (POC walkthrough) — planned within Week 1
-📍 4. What do you plan to build with Polygon funding?
+GitHub repository (work-in-progress) (or placeholder)
+PARP/NCBR-style R&D report
+Pitch deck (PDF)
+One‑Pager + Executive Summary (PL/EN)
+Short Loom video (POC walkthrough) — planned within Week 1
+4. What do you plan to build with Polygon funding?
 
 With Polygon support, I will (milestone‑based, auditable deliverables):
 
@@ -58,7 +58,7 @@ With Polygon support, I will (milestone‑based, auditable deliverables):
     Grow a community of DeFi builders using Polygon via no-code UX
     • Evidence: tutorials, templates library, Discord metrics
 
-🧮 5. Requested Grant Amount (Revised: $15,000)
+5. Requested Grant Amount (Revised: $15,000)
 
 Milestone-based budget with detailed line items and evidence requirements:
 
@@ -103,7 +103,7 @@ Total: $15,000
 Disbursement & evidence:
 - Funds released per milestone against evidence (repo tags, testnet tx hashes, Defender IDs/logs, demo video, test reports, runbooks).
 - Reserve used only with explicit linkage to milestone deliverables.
-👤 6. Who are you?
+6. Who are you?
 
     Solo founder with product/DeFi background; leveraging AI/no‑code and open‑source to execute efficiently
     Experience coordinating protocol integrations and automation (Zapier/n8n)
@@ -111,7 +111,7 @@ Disbursement & evidence:
     Community‑oriented approach (docs, tutorials, open templates)
     Plan: progressively open‑source and enable DAO‑friendly contribution model
 
-🧱 7. Tech Stack
+7. Tech Stack
 
     Frontend: React + Tailwind + embedded n8n editor
     Automation: Custom n8n workflows, Zapier webhooks
@@ -124,7 +124,7 @@ Notes for solo execution:
     • Use free/low‑cost tiers; defer paid infra until post‑beta
     • Keep infra as code + runbooks for transparency and repeatability
 
-📈 8. Milestones (with evidence and budget)
+8. Milestones (with evidence and budget)
 
 M1 — Orchestration + Polygon integration — $3,200 (Month 1)
 Evidence: node repo package, workflow JSON, demo video, RPC config, monitoring snapshot
@@ -143,27 +143,19 @@ Evidence: onboarding guide, 2 Loom tutorials, feedback synthesis, analytics snap
 
 Reserve — $800 (any month as needed)
 Evidence: linked issue(s), cost receipt, and milestone tie‑in
-🪪 9. Licensing & Openness
+9. Licensing & Openness
 
     Core templates, n8n nodes, and SDKs intended to be open‑sourced (MIT where feasible; GPL/SSPL considered for certain components)
     Documentation and templates published on GitHub + Docs
     Long-term vision includes strategy marketplace and shared logic layers
 
-📎 Supporting Links
+Supporting Links
 
-    📄 HookBuilder PARP/NCBR R&D Report
-    🖼️ Pitch deck (light theme)
-    📄 One‑Pager + Executive Summary (PL/EN)
-    🗂️ README (project overview, MVP plan)
+    HookBuilder PARP/NCBR R&D Report
+    Pitch deck (light theme)
+    One‑Pager + Executive Summary (PL/EN)
+    README (project overview, MVP plan)
     GitHub Repository (soon-to-be public)
     Personal Dev Profile: GitHub
-
-✅ Ready to Submit?
-
-You can now:
-
-    Fill out the Polygon Village application form
-    Upload the above docs + pitch (add short Loom demo)
-    Share GitHub + roadmap
 
 Solo‑founder disclosure: This application explicitly states solo execution and no prior funding. Delivery is planned through AI/no‑code + open‑source, with milestone‑based evidence to de‑risk grant allocation.
