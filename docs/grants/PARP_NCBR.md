@@ -7,6 +7,7 @@ HookBuilder – Orchestrated Automation Platform for DeFi Protocols
 Applicant Profile & Delivery Model (Solo Founder, No Prior Funding)
 - Status: Solo founder; no initial funding; no internal engineering team.
 - Delivery: Integration‑first (n8n, OpenZeppelin Defender, Zapier, The Graph), leveraging AI/no‑code and open‑source components on public testnets.
+- **✅ ACHIEVED**: Live POC with blockchain evidence (Sepolia testnet transaction: `0x1add387973a0826399198c5ef4a734d7aec304cda1a6c9db4e0365412162d6ce`)
 - Budgeting: Milestone‑based; disbursements tied to auditable deliverables (e.g., audits, POC evidence, deployments).
 - Outsourcing: Critical specialist tasks (e.g., smart‑contract audit, security hardening) engaged precisely at the milestone they are required.
 
