@@ -159,6 +159,4 @@ class EthereumBalance {
   }
 }
 
-module.exports = {
-  EthereumBalance,
-};
+module.exports = EthereumBalance;

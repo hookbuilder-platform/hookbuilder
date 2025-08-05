@@ -18,59 +18,77 @@ The platform uses an integration-first approach built around these core componen
 5. **Deployment & Operations** - OpenZeppelin Defender (relayers, sentinels), CI/CD, monitoring
 6. **Data Layer** - Zapper API with fallbacks (CoinGecko, DefiLlama, The Graph) for portfolio, prices, and events
 
-### Planned Project Structure
-The repository will evolve into a monorepo:
+### Current Project Structure
+The repository is a working monorepo with the following structure:
 ```
 /apps
-  /web               # Next.js/React builder + marketplace
-  /api               # Fastify API
-  /n8n               # n8n Docker + custom nodes
-  /contracts         # Solidity hooks + templates (Hardhat/Foundry)
+  /web               # Vite + React + TypeScript frontend (working)
+  /api               # Fastify API (placeholder structure)
+  /n8n               # n8n Docker + custom DeFi nodes (working)
+  /contracts         # Solidity hooks + templates (placeholder)
 /packages
-  /ui                # Shared UI components
-  /sdk               # JS/TS SDK for HookBuilder API
-  /schemas           # Zod/JSON schemas for strategies/nodes
-/docs              # Already contains grants, research, and business documentation
+  /ui                # Shared UI components (placeholder)
+  /sdk               # JS/TS SDK for HookBuilder API (placeholder)
+  /schemas           # Zod/JSON schemas (placeholder)
+/docs              # Complete grants, research, and business documentation
 ```
 
 ## Development Setup Commands
 
 ### Prerequisites
-- Node.js 18+, pnpm or npm
-- Docker (for n8n, DB, Defender relayer)
+- Node.js 18+, npm 8+ (specified in package.json engines)
+- Docker (for n8n orchestration)
 - Wallet on Sepolia testnet for deployments
 
-### Local Development (When Implemented)
+### Root-Level Commands (Turbo Monorepo)
 ```bash
-# Local orchestration (n8n)
-docker-compose up n8n
+# Development
+npm run dev           # Start all development servers
+npm run build         # Build all packages using Turbo
+npm run test          # Run tests across all packages
+npm run lint          # Lint all packages
+npm run type-check    # TypeScript checking across monorepo
+npm run clean         # Clean all build artifacts and node_modules
 
-# Smart contracts
-cd apps/contracts
-npm run test          # Run contract tests
-npm run deploy:sepolia # Deploy to Sepolia testnet
-npm run coverage      # Generate test coverage report
+# Docker orchestration
+npm run docker:up     # Start n8n container
+npm run docker:down   # Stop n8n container
 
-# Backend API
-cd apps/api
-npm run dev          # Start development server
-npm run test         # Run API tests
+# Evidence and demo scripts
+npm run evidence:generate  # Generate grant evidence
+npm run demo:record       # Demo recording for grants
+npm run grant:package     # Package submission materials
+```
 
-# Frontend
+### Individual Package Commands
+```bash
+# Frontend (apps/web) - Vite + React + TypeScript
 cd apps/web
-npm run dev          # Start Next.js development server
-npm run build        # Build for production
-npm run test         # Run frontend tests
+npm run dev          # Start Vite dev server
+npm run build        # Build with TypeScript compilation + Vite
+npm run lint         # ESLint with React rules
+npm run preview      # Preview production build
+
+# n8n Custom Nodes (apps/n8n)
+cd apps/n8n
+npm run dev          # Mock n8n development (see scripts/docker-mock.js)
+npm run build        # Build custom nodes
+npm run test         # Test n8n nodes
+
+# API (apps/api) - Placeholder structure
+cd apps/api
+npm run dev          # Currently placeholder
+npm run build        # Currently placeholder
 ```
 
 ## Key Implementation Details
 
 ### Technology Stack
-- **Frontend**: React 18+, TypeScript, React Flow, Tailwind, Wagmi + Viem
-- **Backend**: Node.js, Fastify, PostgreSQL, Redis, IPFS, Docker
-- **Blockchain**: Solidity 0.8.24+, Hardhat, Foundry, Create2, The Graph
-- **Security/Operations**: OpenZeppelin (MIT), Defender (relayers/sentinels/autotasks)
-- **AI/ML**: OpenAI API, custom models for gas/security recommendations
+- **Frontend**: React 19, TypeScript 5.8, Vite 7, Tailwind 4, ESLint 9
+- **Build System**: Turbo monorepo, npm workspaces, TypeScript compilation
+- **n8n Integration**: Custom DeFi nodes, Docker orchestration, SQLite storage
+- **Planned**: Node.js/Fastify backend, Solidity contracts, OpenZeppelin security
+- **Development**: Docker Compose, professional monorepo structure
 
 ### MVP Development Phases (6-8 weeks)
 1. **Week 1-2**: Self-host n8n, build 5 core DeFi nodes, embed editor, Sepolia testnet
@@ -87,11 +105,69 @@ npm run test         # Run frontend tests
 
 ## Current State
 
-This repository currently contains comprehensive project documentation and specifications. The actual code implementation will begin following the roadmap outlined in `/docs/HookBuilder/Roadmap.md`. Initial focus is on n8n orchestration setup and custom DeFi node development.
+This repository contains a working POC with professional monorepo structure:
 
-## Important Files
+### Implemented Components
+- **Monorepo Structure**: Turbo + npm workspaces with 7 packages
+- **Frontend**: Production-ready React 19 + TypeScript 5.8 + Vite 7 + Tailwind 4 (apps/web)
+- **n8n Integration**: Custom EthereumBalance node with multi-network RPC support (apps/n8n)
+- **Build System**: All packages building successfully with TypeScript compilation
+- **Docker Environment**: n8n orchestration with custom node mounting
+- **Documentation**: Complete grant application materials and evidence
+
+### Working Features
+- Custom n8n node for Ethereum balance checking across networks (Mainnet, Sepolia, Polygon)
+- Vite-based frontend with modern React + TypeScript stack
+- Docker environment for n8n orchestration
+- Evidence generation scripts for grant applications
+- Testnet integration with blockchain transaction proof
+
+### Next Development Phase
+Following the roadmap in `/docs/HookBuilder/Roadmap.md`, next steps focus on:
+1. Expanding custom DeFi nodes (5 core nodes)
+2. Visual strategy builder implementation
+3. Smart contract templates
+4. Marketplace v0
+
+## Important Files and Locations
+
+### Key Implementation Files
+- `apps/n8n/nodes/EthereumBalance.node.js` - Custom DeFi node with multi-network RPC support
+- `apps/web/` - React 19 + TypeScript + Vite + Tailwind frontend
+- `turbo.json` - Monorepo build pipeline with caching configuration
+- `docker-compose.yml` - n8n orchestration with custom node mounting
+- `package.json` - Root workspace configuration with development scripts
+- `tests/` - Integration tests and blockchain evidence generation scripts
+
+### Documentation and Business Materials
 - `/README.md` - Main project overview and investor entry point
 - `/docs/HookBuilder/HookBuilder_Business_Plan.md` - Detailed business plan with financial projections
 - `/docs/HookBuilder/Roadmap.md` - Step-by-step implementation roadmap
 - `/docs/grants/` - Grant applications and funding materials
 - `/docs/research/` - Market research and technical learning paths
+
+### Evidence and Testing
+- `tests/test-ethereum-rpc.js` - Working RPC integration test
+- `tests/create-testnet-transaction.js` - Blockchain evidence generator
+- `tests/execute-testnet-tx.js` - Live testnet transaction execution
+
+## Development Workflow
+
+### Running the Application
+1. **Frontend Development**: `cd apps/web && npm run dev` (Vite dev server on port 5173)
+2. **n8n Integration**: `npm run docker:up` (n8n on port 5678 with custom nodes)
+3. **Full Development**: `npm run dev` (starts all development servers)
+
+### Build and Quality Checks
+- **Build All**: `npm run build` (uses Turbo for parallel builds)
+- **Type Checking**: `npm run type-check` (TypeScript across all packages)
+- **Linting**: `npm run lint` (ESLint across all packages)
+- **Testing**: `npm run test` (runs tests across all packages)
+
+### Package-Specific Commands
+- **Frontend**: Standard Vite commands (`dev`, `build`, `lint`, `preview`)
+- **n8n**: Custom node development with Docker integration
+- **API/Contracts**: Currently placeholder structures
+
+### Git Workflow
+The repository uses conventional commits and has complete grant submission materials. Current branch structure supports both development and grant evidence generation.

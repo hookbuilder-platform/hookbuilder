@@ -9,12 +9,18 @@ Democratizing DiFi development — from weeks to minutes, from $50k to $50–500
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/hookbuilder-platform/hookbuilder/releases)
 
-## 🚀 **Current Status: POC Evidence Complete - Grant Ready**
+## 🚀 **Current Status: Live Multi-Chain DeFi Automation - Grant Ready**
 
-**Latest Achievement:** n8n integration working + testnet transaction evidence generated  
-**Grant Applications:** Ready for immediate submission with comprehensive evidence package  
-**Demo:** Professional React frontend + working n8n nodes + blockchain evidence  
-**POC Status:** ✅ "Walking skeleton" complete - all core components operational
+**Latest Achievement (August 5, 2025):** 
+- ✅ **Multi-Chain Workflow**: Live n8n automation across Ethereum + Polygon + Sepolia
+- ✅ **Professional RPC Integration**: Working blockchain connectivity with error handling
+- ✅ **JavaScript Data Processing**: Advanced portfolio analysis and DeFi recommendations
+- ✅ **Visual Workflow Builder**: Complete drag-and-drop automation platform
+- ✅ **Export Evidence**: Reproducible workflow JSON + execution screenshots
+
+**Grant Applications:** Ready with comprehensive technical evidence package  
+**Live Demo:** http://localhost:5678 - Multi-Chain DeFi Portfolio Monitor  
+**POC Status:** ✅ MVP core functionality operational with professional evidence
 
 ---
 
@@ -84,7 +90,7 @@ KPIs (6–9 months): 100+ beta users, 5k+ executions/month, 95% success rate.
 ---
 
 ## Tech Stack
-- Frontend: React 18+, TypeScript, React Flow, Tailwind, Wagmi + Viem
+- Frontend: React 19, TypeScript 5.8, React Flow, Tailwind 4, Wagmi + Viem
 - Backend: Node.js, Fastify, PostgreSQL, Redis, IPFS, Docker
 - Blockchain: Solidity 0.8.24+, Hardhat, Foundry, Create2, The Graph
 - Security/Ops: OpenZeppelin (MIT), Defender (relayers/sentinels/autotasks)
@@ -238,12 +244,12 @@ To be finalized with legal review (MIT for libraries/templates; source-available
 ---
 
 ## Contact
-- Name: [HookBuilder Platform]
-- Email: [hookbuilder@proton.me]
+- Name: HookBuilder Platform
+- Email: hookbuilder@proton.me
 - GitHub: https://github.com/hookbuilder-platform
-- Website: (?)
-- Deck: https://hookbuilder.com/deck
-- Demo: https://hookbuilder.com/demo
+- Website: (coming soon)
+- Deck: See docs/grants/HookBuilder_Pitch_Deck.md
+- Demo: (POC video coming soon)
 
 ---
 

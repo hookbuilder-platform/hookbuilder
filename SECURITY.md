@@ -6,7 +6,7 @@ The HookBuilder Platform takes security seriously. We appreciate your efforts to
 
 ### How to Report
 
-Please report security vulnerabilities by emailing **security@hookbuilder.platform** with:
+Please report security vulnerabilities by emailing **hookbuilder@proton.me** with:
 
 - Description of the vulnerability
 - Steps to reproduce the issue
@@ -68,5 +68,5 @@ For developers contributing to HookBuilder:
 
 ## Contact
 
-For security-related questions: security@hookbuilder.platform
-For general questions: hello@hookbuilder.platform
+For security-related questions: hookbuilder@proton.me
+For general questions: hookbuilder@proton.me

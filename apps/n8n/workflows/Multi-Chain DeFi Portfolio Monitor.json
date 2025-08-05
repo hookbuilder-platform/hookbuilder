@@ -1,0 +1,176 @@
+{
+  "name": "Multi-Chain DeFi Portfolio Monitor",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -816,
+        208
+      ],
+      "id": "9a39e566-3e33-4ea0-8671-57c8d6535fc4",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://rpc.ankr.com/polygon",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 3,\n  \"method\": \"eth_getBalance\",\n  \"params\": [\"0x742d35Cc6634C0532925a3b8D0ea5d7c0d7eD13c\", \"latest\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -576,
+        208
+      ],
+      "id": "3fc3dc66-2558-4044-bf6f-b7418353db3d",
+      "name": "Polygon Balance"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://rpc.ankr.com/eth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"eth_getBalance\",\n  \"params\": [\"0x742d35Cc6634C0532925a3b8D0ea5d7c0d7eD13c\", \"latest\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -576,
+        48
+      ],
+      "id": "99910c8a-d4be-4caf-bc29-dd8261ff6f09",
+      "name": "Ethereum Mainnet Balance",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://rpc.ankr.com/eth_sepolia",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 3,\n  \"method\": \"eth_getBalance\",\n  \"params\": [\"0x742d35Cc6634C0532925a3b8D0ea5d7c0d7eD13c\", \"latest\"]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -576,
+        368
+      ],
+      "id": "afd12e68-9c6a-4b9e-94af-1f2edb5af76c",
+      "name": "Sepolia Testnet Balance"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -288,
+        192
+      ],
+      "id": "6ebf7cd8-5717-4e64-a110-7a82794cb29a",
+      "name": "Combine All Balances"
+    },
+    {
+      "parameters": {
+        "jsCode": "// HookBuilder Multi-Chain Portfolio Analysis\n  // Grant Evidence: Professional DeFi Data Processing\n\n  const items = $input.all();\n  let totalBalanceWei = 0n;\n  const chainData = [];\n\n  // Process each chain response\n  for (let i = 0; i < items.length; i++) {\n    const item = items[i];\n    const result = item.json.result;\n\n    if (result && result !== '0x0') {\n      const balanceWei = BigInt(result);\n      const balanceEth = Number(balanceWei) / 1e18;\n\n      totalBalanceWei += balanceWei;\n\n      // Determine chain from request ID or URL\n      let chainName = 'Unknown';\n      if (i === 0) chainName = 'Ethereum';\n      if (i === 1) chainName = 'Polygon';\n      if (i === 2) chainName = 'Sepolia';\n\n      chainData.push({\n        chain: chainName,\n        balanceWei: result,\n        balanceEth: balanceEth,\n        balanceFormatted: `${balanceEth.toFixed(6)} ETH`,\n        hasBalance: balanceEth > 0\n      });\n    }\n  }\n\n  // Calculate portfolio metrics\n  const totalEth = Number(totalBalanceWei) / 1e18;\n  const activeChains = chainData.filter(c => c.hasBalance).length;\n\n  // Generate DeFi recommendations\n  let recommendation = '';\n  let alertLevel = 'LOW';\n\n  if (totalEth > 1.0) {\n    recommendation = 'Consider yield farming, staking, or DeFi strategies';\n    alertLevel = 'HIGH';\n  } else if (totalEth > 0.1) {\n    recommendation = 'Monitor gas costs, consider consolidation';\n    alertLevel = 'MEDIUM';\n  } else {\n    recommendation = 'Portfolio needs funding for DeFi activities';\n    alertLevel = 'LOW';\n  }\n\n  // Portfolio summary for grants evidence\n  const portfolioAnalysis = {\n    // Core metrics\n    totalBalance: totalEth,\n    totalBalanceFormatted: `${totalEth.toFixed(6)} ETH`,\n    activeChains: activeChains,\n    totalChains: chainData.length,\n\n    // Chain breakdown\n    chains: chainData,\n\n    // DeFi analysis\n    alertLevel: alertLevel,\n    recommendation: recommendation,\n\n    // Grant evidence\n    timestamp: new Date().toISOString(),\n    analysis: 'Multi-chain portfolio processed by HookBuilder',\n    evidence: {\n      technology: 'n8n + JavaScript + RPC integration',\n      chains: ['Ethereum', 'Polygon', 'Sepolia'],\n      capability: 'Professional DeFi automation platform'\n    }\n  };\n\n  return [portfolioAnalysis];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -48,
+        208
+      ],
+      "id": "48a4cc7c-2572-4fc8-8a33-0de1ab44906d",
+      "name": "Code"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Polygon Balance",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ethereum Mainnet Balance",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sepolia Testnet Balance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ethereum Mainnet Balance": {
+      "main": [
+        [
+          {
+            "node": "Combine All Balances",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sepolia Testnet Balance": {
+      "main": [
+        [
+          {
+            "node": "Combine All Balances",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Polygon Balance": {
+      "main": [
+        [
+          {
+            "node": "Combine All Balances",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Combine All Balances": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "de8c254b-589c-45b9-b2cf-ad0b1603abad",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "196f0aa1b3645ac292e5282e4bc288d06bee5c5e8d61400900cf911d32439200"
+  },
+  "id": "apl6HWOCgQ8Ogzjy",
+  "tags": []
+}

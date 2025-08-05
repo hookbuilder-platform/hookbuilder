@@ -1,7 +1,7 @@
 # HookBuilder — One-Pager + Executive Summary (PL/EN)
 
 Version: 1.0  
-Date: August 2025
+Date: August 5, 2025
 Owner: HookBuilder
 
 ---
@@ -51,7 +51,7 @@ Efekt: od tygodni/miesięcy do minut; od 50 000 USD do 50–500 USD.
 - POC: testnet, podstawowe szablony hooków i workflowów
 
 ### Technologia (architektura skrót)
-- Frontend: React + TypeScript + React Flow + Tailwind; Web3: Wagmi/Viem
+- Frontend: React 19 + TypeScript 5.8 + React Flow + Tailwind 4; Web3: Wagmi/Viem
 - Backend: Node.js + Fastify; Postgres; Redis; IPFS; Docker
 - Blockchain: Solidity 0.8.24+, Hardhat/Foundry, Create2, The Graph
 - Bezpieczeństwo: OpenZeppelin (MIT), Defender (relayers, sentinels), audyty
@@ -87,7 +87,7 @@ Efekt: od tygodni/miesięcy do minut; od 50 000 USD do 50–500 USD.
 
 ### Wezwanie do działania
 Szukamy: grantów (PARP/NCBR, Polygon), partnerstw (Uniswap/n8n/Zapier), wczesnych użytkowników.  
-Kontakt: [email] | Repo/POC: [link] | Demo: [link]
+Kontakt: hookbuilder@proton.me | Repo/POC: https://github.com/hookbuilder-platform/hookbuilder | Demo: (w przygotowaniu)
 
 ---
 
@@ -150,7 +150,7 @@ Outcome: from weeks/months to minutes; from USD 50k to USD 50–500.
 - POC: testnet, basic hook and workflow templates
 
 ### Technology (brief)
-- Frontend: React + TypeScript + React Flow + Tailwind; Web3: Wagmi/Viem
+- Frontend: React 19 + TypeScript 5.8 + React Flow + Tailwind 4; Web3: Wagmi/Viem
 - Backend: Node.js + Fastify; Postgres; Redis; IPFS; Docker
 - Blockchain: Solidity 0.8.24+, Hardhat/Foundry, Create2, The Graph
 - Security: OpenZeppelin (MIT), Defender (relayers, sentinels), audits
@@ -186,7 +186,7 @@ Outcome: from weeks/months to minutes; from USD 50k to USD 50–500.
 
 ### Call to Action
 Seeking: grants (PARP/NCBR, Polygon), partners (Uniswap/n8n/Zapier), early users.  
-Contact: [email] | Repo/POC: [link] | Demo: [link]
+Contact: hookbuilder@proton.me | Repo/POC: https://github.com/hookbuilder-platform/hookbuilder | Demo: (coming soon)
 
 ---
 
@@ -219,9 +219,9 @@ We seek grant funding (PARP/NCBR, Polygon) to develop DeFi nodes for n8n, data i
 ---
 
 ## Contact
-Name: [HookBuilder Platform]  
-Email: [hookbuilder@proton.me]  
-GitHub: [(https://github.com/hookbuilder-platform)]  
-Website: [?]  
-Deck: [hookbuilder.com/deck]  
-Demo: [hookbuilder.com/demo]
+Name: HookBuilder Platform  
+Email: hookbuilder@proton.me  
+GitHub: https://github.com/hookbuilder-platform  
+Website: (coming soon)  
+Deck: See docs/grants/HookBuilder_Pitch_Deck.md  
+Demo: (POC video coming soon)

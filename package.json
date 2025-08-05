@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "No-code platform for building, testing, and deploying DeFi automation strategies using Uniswap V4 Hooks",
   "private": true,
+  "packageManager": "npm@9.2.0",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -22,7 +23,7 @@
   },
   "devDependencies": {
     "rimraf": "^5.0.0",
-    "turbo": "^1.10.0"
+    "turbo": "^2.5.5"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -49,6 +50,8 @@
     "url": "https://github.com/hookbuilder-platform/hookbuilder/issues"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "ethers": "^6.15.0",
+    "node-fetch": "^2.7.0",
+    "secp256k1": "^5.0.1"
   }
 }

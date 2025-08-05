@@ -2,18 +2,79 @@ services:
   n8n:
     image: n8nio/n8n:latest
     container_name: hookbuilder-n8n
+    restart: unless-stopped
     ports:
       - "5678:5678"
     environment:
+      # Database
+      - DB_TYPE=sqlite
+      - DB_SQLITE_DATABASE=/home/node/.n8n/database.sqlite
+      
+      # Basic configuration
       - N8N_BASIC_AUTH_ACTIVE=false
       - N8N_HOST=localhost
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
+      
+      # Custom nodes
+      - N8N_CUSTOM_EXTENSIONS=/data/custom-nodes
+      - NODE_PATH=/data/custom-nodes
+      
+      # Security (development mode)
+      - N8N_SECURE_COOKIE=false
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
       - WEBHOOK_URL=http://localhost:5678/
-      - GENERIC_TIMEZONE=Europe/Warsaw
+      
+      # Logging
       - N8N_LOG_LEVEL=info
-      - DB_TYPE=sqlite
+      - N8N_LOG_OUTPUT=console
+      
+      # Performance
+      - N8N_PAYLOAD_SIZE_MAX=16
+      - N8N_METRICS=false
+      
     volumes:
-      - ./apps/n8n/data:/home/node/.n8n
-      - ./apps/n8n/nodes:/home/node/.n8n/custom
+      # Persistent data
+      - n8n_data:/data
+      
+      # Custom nodes temporarily disabled for workflow testing
+      # - ./apps/n8n/nodes:/data/custom-nodes:ro
+      
+      # Mount workflow backups (optional)
+      - ./apps/n8n/workflows:/data/workflows-backup:rw
+      
+    networks:
+      - hookbuilder-network
+    
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5678/healthz || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Redis for queue management (future use)
+  redis:
+    image: redis:7-alpine
+    container_name: hookbuilder-redis
     restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - hookbuilder-network
+    profiles:
+      - queue
+    command: redis-server --appendonly yes
+
+volumes:
+  n8n_data:
+    name: hookbuilder_n8n_data
+  redis_data:
+    name: hookbuilder_redis_data
+
+networks:
+  hookbuilder-network:
+    name: hookbuilder-network
+    driver: bridge
